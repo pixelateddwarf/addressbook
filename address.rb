@@ -6,7 +6,7 @@ class Address
     case format
     when 'long'              ## long address is on several lines
       address += street_1 + "\n"
-      address += street_2 + "\n" if !street_2.nil?
+      address += street_2 + "\n" if !street_2.nil?  ##if we dont have one dont include it
       address += "#{city}, #{state} #{postal_code}"
     when 'short'
       address += "#{kind}: "
