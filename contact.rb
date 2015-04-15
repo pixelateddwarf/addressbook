@@ -98,13 +98,3 @@ class Contact
 
 end
 
-alan = Contact.new
-alan.first_name = "Alan"
-alan.last_name = "Dunbar"
-alan.add_phone_number("Home", "123-456-7890")
-alan.add_phone_number("Work", "456-789-0123")
-alan.add_address("Home", "123 Main St.", "", "Valodsta", "GA", "123456")
-
-puts alan.to_s('full_name')
-alan.print_phone_numbers
-alan.print_addresses
