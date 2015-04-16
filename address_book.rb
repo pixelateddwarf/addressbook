@@ -3,6 +3,19 @@ require "./contact"
 class AddressBook
   attr_reader :contacts
 
+def run                              ## Program Menu - So far just "e" to exit 
+  loop do
+    puts "Address Book"
+    puts "e: Exit"
+    print 'Enter your choice: '
+    input = gets.chomp
+    case input
+    when 'e'
+      break
+    end
+  end
+end
+
   def initialize
     @contacts = []
   end
@@ -71,19 +84,4 @@ end
 end
 
 address_book = AddressBook.new
-
-alan = Contact.new
-alan.first_name = "Alan"
-alan.last_name = "Dunbar"
-alan.add_phone_number("Home", "123-456-7890")
-alan.add_phone_number("Work", "456-789-0123")
-alan.add_address("Home", "123 Main St.", "", "Valodsta", "GA", "123456")
-
-address_book.contacts.push(alan)
-
-
-## address_book.print_contact_list
-
-##address_book.find_by_name("r")
-
-address_book.find_by_address("Main")
+address_book.run
